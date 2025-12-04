@@ -73,3 +73,7 @@ Screenshot: `dashboard_churn.png`
 ---
 
 ## Repository Contents
+customer_churn_eda.ipynb
+Customer_Churn.pbix
+dashboard_churn.png
+README.md
