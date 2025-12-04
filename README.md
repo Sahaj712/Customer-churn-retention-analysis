@@ -1,29 +1,75 @@
-Customer Engagement & Churn Analysis
+# Customer Churn Analysis – Exploratory Data Analysis & Power BI Dashboard
 
-This project focuses on understanding customer behavior and churn patterns within a service-based platform. The dataset includes customer demographics, contract details, charges, engagement metrics, and newly engineered fields such as support ticket volume, satisfaction score, monthly logins, and usage categories. The objective is to identify the key drivers behind customer churn and prepare insights for dashboarding and business recommendations.
+## Overview
+This project analyzes customer churn using Python-based Exploratory Data Analysis (EDA) and a Power BI dashboard. The goal is to understand which customer segments are most likely to churn and identify the key factors driving churn.
 
-Current Status
+This version of the project includes:
+- Data cleaning and exploration in Python
+- Churn analysis using grouping and aggregation
+- Visual insights into churn drivers
+- A complete Power BI dashboard built from the dataset
 
--Dataset imported and validated.
--Basic exploratory data analysis completed.
--Data cleaning performed on Total Charges to ensure numeric consistency.
--Preliminary churn segmentation completed across usage, support tickets, and satisfaction.
+---
 
-Early Insights
+## Exploratory Data Analysis (Python)
+The EDA covers:
+- Data quality checks and type conversion
+- Missing value handling
+- Feature creation (usage category, tenure group, charge group)
+- Churn rate calculations across different customer segments
 
--Low usage customers show an approximate 82 percent churn rate, indicating that lack of engagement is a major churn driver.
--Customers with five or more support tickets show a 100 percent churn rate, highlighting high support friction as a critical risk factor.
--Customers with satisfaction scores of 1 or 2 churn at 100 percent, while satisfaction scores of 4 or 5 show 0 percent churn, demonstrating that satisfaction strongly correlates with retention.
+Key relationships analyzed:
+- Usage category vs churn
+- Support tickets vs churn
+- Satisfaction score vs churn
+- Contract type vs churn
+- Tenure group vs churn
+- Charge group vs churn
+- Internet service vs churn
 
-Business Implications
+Notebook: `customer_churn_eda.ipynb`
 
--Increasing product engagement should be prioritized to reduce churn among low-usage customers.
--High-ticket customers should be flagged as high-risk and addressed proactively through faster resolution and support intervention.
--Customer satisfaction monitoring and recovery strategies are essential to prevent churn among unhappy users.
+---
 
-Next Steps
+## Power BI Dashboard
+The Power BI dashboard visualizes churn patterns for quick business understanding.
 
--Develop visualizations to illustrate churn patterns.
--Build a structured Power BI dashboard.
--Formulate data-driven retention recommendations.
--Document insights and analysis in the final report.
+### Metrics:
+- Total Customers
+- Churn Rate
+- Average Monthly Charges
+- Average Tenure
+
+### Visuals:
+- Churn Rate by Contract Type
+- Churn Rate by Satisfaction Score
+- Churn Rate by Internet Service Type
+- Churn Rate by Charge Group
+- Churn Rate by Tenure Group
+
+Dashboard file: `Customer_Churn.pbix`  
+Screenshot: `dashboard_churn.png`
+
+---
+
+## Key Findings
+- Low usage customers have the highest churn rate.
+- Customers with multiple support tickets show extremely high churn.
+- Low satisfaction scores (1–2) have nearly 100% churn.
+- Month-to-month contract customers churn far more than long-term customers.
+- Early-tenure customers (0–12 months) churn the most.
+- Higher monthly charges correlate with higher churn.
+- Fiber-optic customers churn more than DSL or no-internet customers.
+
+---
+
+## Business Insights
+- Improve customer onboarding in the first 12 months.
+- Prioritize customers facing repeated support issues.
+- Launch satisfaction improvement programs targeting low scorers.
+- Incentivize long-term contract adoption.
+- Revisit pricing strategies in higher charge tiers.
+
+---
+
+## Repository Contents
